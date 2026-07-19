@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>মার্জিনালিয়া</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">গদ্যের একটি জার্নাল</div>
+  <a class="site-title-link" href="index.html"><h1 class="site-title">মার্জিনালিয়া</h1></a>
+</header>
+
+<div class="rule ornate">✦</div>
+
+<main>
+  <a class="back-link" id="back-btn" href="index.html">← ফিরে যান</a>
+  <div class="piece-meta" id="piece-meta"></div>
+  <h1 class="piece-title" id="piece-title"></h1>
+  <div class="piece-body" id="piece-body"></div>
+  <div class="piece-end">✦</div>
+</main>
+
+<footer>© ২০২৬ · মার্জিনালিয়া · লেখার একটি ঘর</footer>
+
+<script src="data.js"></script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get('id');
+  const piece = PIECES.find(p => p.id === id);
+
+  if (piece) {
+    const category = CATEGORIES.find(c => c.slug === piece.category);
+    document.title = piece.title + " — মার্জিনালিয়া";
+    document.getElementById('piece-meta').textContent = `${category ? category.name : ''} · ${piece.meta}`;
+    document.getElementById('piece-title').textContent = piece.title;
+    document.getElementById('piece-body').innerHTML = piece.body;
+    document.getElementById('back-btn').href = `category.html?cat=${piece.category}`;
+    document.getElementById('back-btn').textContent = `← ${category ? category.name : ''}-এ ফিরে যান`;
+  } else {
+    document.getElementById('piece-title').textContent = "লেখা খুঁজে পাওয়া যায়নি";
+  }
+</script>
+
+</body>
+</html>

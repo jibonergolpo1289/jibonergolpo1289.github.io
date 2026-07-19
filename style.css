@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;600;700&family=Hind+Siliguri:wght@400;500;600&display=swap');
+
+:root{
+  --paper:#FAF6EE;
+  --ink:#211B14;
+  --ink-soft:#5B5142;
+  --wine:#6E2A2E;
+  --gold:#A9843F;
+  --rule:#DCD2BA;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Noto Serif Bengali', serif;
+  -webkit-font-smoothing:antialiased;
+}
+
+header{
+  max-width:720px;
+  margin:0 auto;
+  padding:56px 24px 24px;
+  text-align:center;
+}
+.eyebrow{
+  font-family:'Hind Siliguri', sans-serif;
+  font-size:12px;
+  letter-spacing:.05em;
+  color:var(--wine);
+  margin-bottom:12px;
+  font-weight:600;
+}
+h1.site-title{
+  font-family:'Noto Serif Bengali', serif;
+  font-weight:700;
+  font-size:clamp(32px, 6vw, 48px);
+  margin:0;
+}
+a.site-title-link{ text-decoration:none; color:inherit; }
+.tagline{
+  font-style:italic;
+  color:var(--ink-soft);
+  font-size:16px;
+  margin-top:8px;
+}
+
+.rule.ornate{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  max-width:720px;
+  margin:24px auto;
+  gap:14px;
+  color:var(--gold);
+  font-size:13px;
+}
+.rule.ornate::before, .rule.ornate::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background:var(--rule);
+}
+
+main{
+  max-width:720px;
+  margin:0 auto;
+  padding:12px 24px 100px;
+}
+
+/* Category cards (page 1) */
+.category-grid{
+  display:grid;
+  gap:18px;
+}
+.category-card{
+  display:block;
+  padding:30px 26px;
+  border:1px solid var(--rule);
+  border-radius:4px;
+  text-decoration:none;
+  color:inherit;
+  transition:border-color .2s ease, transform .2s ease, background .2s ease;
+}
+.category-card:hover{
+  border-color:var(--wine);
+  transform:translateY(-2px);
+  background:rgba(110,42,46,0.03);
+}
+.category-name{
+  font-family:'Noto Serif Bengali', serif;
+  font-weight:700;
+  font-size:26px;
+  margin:0 0 6px;
+}
+.category-count{
+  font-family:'Hind Siliguri', sans-serif;
+  font-size:13px;
+  color:var(--ink-soft);
+}
+
+/* Title list (page 2) */
+.entry{
+  display:block;
+  padding:26px 4px;
+  border-bottom:1px solid var(--rule);
+  text-decoration:none;
+  color:inherit;
+  cursor:pointer;
+  transition:padding-left .25s ease, background .25s ease;
+}
+.entry:hover{
+  padding-left:14px;
+  background:linear-gradient(90deg, rgba(110,42,46,0.04), transparent 60%);
+}
+.entry:last-child{border-bottom:none;}
+.entry-meta{
+  font-family:'Hind Siliguri', sans-serif;
+  font-size:12.5px;
+  color:var(--ink-soft);
+  margin-bottom:6px;
+}
+.entry-title{
+  font-family:'Noto Serif Bengali', serif;
+  font-weight:700;
+  font-size:24px;
+  margin:0 0 4px;
+}
+.entry-excerpt{
+  color:var(--ink-soft);
+  font-size:15.5px;
+  line-height:1.7;
+  margin:0;
+}
+
+/* Full piece (page 3) */
+.back-link{
+  font-family:'Hind Siliguri', sans-serif;
+  font-size:13px;
+  color:var(--wine);
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  margin:16px 4px 8px;
+  font-weight:600;
+}
+.back-link:hover{text-decoration:underline;}
+
+.piece-title{
+  font-family:'Noto Serif Bengali', serif;
+  font-weight:700;
+  font-size:clamp(28px,5vw,38px);
+  margin:14px 0 6px;
+  line-height:1.3;
+}
+.piece-meta{
+  font-family:'Hind Siliguri', sans-serif;
+  font-size:12.5px;
+  color:var(--ink-soft);
+}
+.piece-body{
+  padding:20px 4px 10px;
+  font-size:19px;
+  line-height:2;
+}
+.piece-body p{margin:0 0 1.4em;}
+
+.piece-end{
+  text-align:center;
+  color:var(--gold);
+  font-size:20px;
+  margin:30px 0 8px;
+}
+
+.empty-note{
+  color:var(--ink-soft);
+  font-family:'Hind Siliguri', sans-serif;
+  font-size:15px;
+  padding:30px 4px;
+}
+
+footer{
+  max-width:720px;
+  margin:0 auto;
+  padding:20px 24px 60px;
+  text-align:center;
+  font-family:'Hind Siliguri', sans-serif;
+  font-size:13px;
+  color:var(--ink-soft);
+}
+
+@media (max-width:480px){
+  header{padding:40px 20px 18px;}
+  .piece-body{font-size:17.5px;}
+}

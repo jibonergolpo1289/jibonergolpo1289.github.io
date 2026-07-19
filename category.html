@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>মার্জিনালিয়া</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">গদ্যের একটি জার্নাল</div>
+  <a class="site-title-link" href="index.html"><h1 class="site-title">মার্জিনালিয়া</h1></a>
+  <div class="tagline" id="cat-name">বিভাগ</div>
+</header>
+
+<div class="rule ornate">✦</div>
+
+<main>
+  <a class="back-link" href="index.html">← সব বিভাগে ফিরে যান</a>
+  <div id="entry-list"></div>
+</main>
+
+<footer>© ২০২৬ · মার্জিনালিয়া · লেখার একটি ঘর</footer>
+
+<script src="data.js"></script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const slug = params.get('cat');
+  const category = CATEGORIES.find(c => c.slug === slug);
+  const list = document.getElementById('entry-list');
+
+  if (category) {
+    document.getElementById('cat-name').textContent = category.name;
+    const items = PIECES.filter(p => p.category === slug);
+
+    if (items.length === 0) {
+      list.innerHTML = `<div class="empty-note">এই বিভাগে এখনো কোনো লেখা নেই।</div>`;
+    } else {
+      items.forEach(p => {
+        const a = document.createElement('a');
+        a.className = 'entry';
+        a.href = `piece.html?id=${p.id}`;
+        a.innerHTML = `
+          <div class="entry-meta">${p.meta}</div>
+          <h2 class="entry-title">${p.title}</h2>
+          <p class="entry-excerpt">${p.excerpt}</p>
+        `;
+        list.appendChild(a);
+      });
+    }
+  } else {
+    document.getElementById('cat-name').textContent = "বিভাগ খুঁজে পাওয়া যায়নি";
+  }
+</script>
+
+</body>
+</html>
