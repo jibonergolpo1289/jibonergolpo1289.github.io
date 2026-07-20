@@ -4,6 +4,10 @@
 // আর "name" হলো বাংলায় যেটা মানুষ দেখবে।
 // ============================================================
 
+const disclaimerData = {
+  title: "DISCLAIMER",
+  message: "⚠️ Disclaimer & 18+ Notice: > This story is entirely fictional. The destination page is strictly restricted for audiences aged 18+ and contains automated ads from third-party networks. Read at your own discretion."
+};
 const CATEGORIES = [
   { slug: "romantic", name: "সৎ আম্মু" },
   { slug: "natok",    name: "ভাবী" },
