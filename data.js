@@ -7,8 +7,7 @@
 const CATEGORIES = [
   { slug: "romantic", name: "সৎ আম্মু" },
   { slug: "natok",    name: "ভাবী" },
-  { slug: "golpo",    name: "চাচী" }
-  { slug: "movie",    name: "খালা" }
+  { slug: "golpo",    name: "খালা" }
 ];
 
 // প্রতিটি লেখার জন্য একটি entry। নতুন লেখা যোগ করতে এই প্যাটার্ন কপি করুন
@@ -16,7 +15,7 @@ const CATEGORIES = [
 const PIECES = [
 {
   id: "romantic-1",
-  category: "golpo",
+  category: "romantic",
   title: "সৎ মা যখন গার্লফ্রেন্ড",
   meta: "৫ মিনিট পড়ার সময়",
   excerpt: "সৎ মাকে করার গল্প",
