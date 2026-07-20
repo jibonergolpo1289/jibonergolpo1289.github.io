@@ -20,6 +20,23 @@
   <div class="category-grid" id="category-grid"></div>
 </main>
 
+<!-- Disclaimer box -->
+<div id="disclaimer" style="border:1px solid #ddd; margin:16px 0;">
+  <div style="background:#111; color:#fff; font-weight:bold; padding:10px 14px; text-transform:uppercase;">
+    <span id="disclaimer-title"></span>
+  </div>
+  <div style="padding:14px; background:#f7f7f7;">
+    <span id="disclaimer-text"></span>
+  </div>
+</div>
+
+<!-- Load data.js BEFORE this script -->
+<script src="data.js"></script>
+<script>
+  document.getElementById('disclaimer-title').textContent = disclaimerData.title;
+  document.getElementById('disclaimer-text').textContent = disclaimerData.message;
+</script>
+  
 <footer>© ২০২৬ · জীবনেরগল্প · লেখার একটি ঘর</footer>
 
 <script src="data.js"></script>
