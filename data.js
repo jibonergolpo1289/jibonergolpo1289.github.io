@@ -14,7 +14,7 @@ const CATEGORIES = [
 // এবং "id" প্রতিবার আলাদা রাখুন।
 const PIECES = [
 {
-  id: "sot-ma-zokhon-girlfriend",
+  id: "romantic-2",
   category: "golpo",
   title: "সৎ মা যখন গার্লফ্রেন্ড",
   meta: "৫ মিনিট পড়ার সময়",
