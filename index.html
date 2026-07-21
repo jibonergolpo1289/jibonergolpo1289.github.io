@@ -33,6 +33,36 @@
 <!-- Load data.js BEFORE this script -->
 <script src="data.js"></script>
 <script>
+  <style>
+  body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+</style>
+
+<script>
+  // Disable right-click menu
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+  // Disable common copy shortcuts
+  document.addEventListener('keydown', function(e) {
+    if (
+      (e.ctrlKey && (e.key === 'c' || e.key === 'u' || e.key === 's')) ||
+      e.key === 'F12'
+    ) {
+      e.preventDefault();
+    }
+  });
+
+  // Disable text selection via drag
+  document.addEventListener('selectstart', function(e) {
+    e.preventDefault();
+  });
+</script>
   document.getElementById('disclaimer-title').textContent = disclaimerData.title;
   document.getElementById('disclaimer-text').textContent = disclaimerData.message;
 </script>
