@@ -140,7 +140,7 @@ const PIECES = [
       এইটাই প্রথম আমি সে*ক*স দেখেছি।।</p>`
   },
    {
-    id: "romantic-3",
+    id: "romantic-4",
     category: "romantic",
     title: " বৃষ্টির রাতে আম্মুর আর্তনাদ",
     meta: "৪0 মিনিট পড়ার সময়",
@@ -336,7 +336,7 @@ const PIECES = [
 </p>`
   },
    {
-    id: "romantic-4",
+    id: "romantic-5",
     category: "romantic",
     title: "নতুন গল্প আসছে",
     meta: "৪ মিনিট পড়ার সময়",
@@ -344,7 +344,7 @@ const PIECES = [
     body: `<p>এখানে দ্বিতীয় প্রবন্ধের লেখা বসবে।</p>`
   },
    {
-    id: "romantic-4",
+    id: "romantic-6",
     category: "romantic",
     title: "আম্মু-আমি এক বিছানায় সারারাত",
     meta: "৪0 মিনিট পড়ার সময়",
