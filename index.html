@@ -70,6 +70,30 @@
     `;
     grid.appendChild(card);
   });
+
+</script>
+  <script>
+  const searchInput = document.getElementById('search-input');
+  const resultsBox = document.getElementById('search-results');
+  searchInput.addEventListener('input', () => {
+    const query = searchInput.value.trim().toLowerCase();
+    resultsBox.innerHTML = '';
+    if (query.length === 0) return;
+    const matches = PIECES.filter(p =>
+      p.title.toLowerCase().includes(query)
+    );
+    if (matches.length === 0) {
+      resultsBox.innerHTML = '<p>কোনো ফলাফল পাওয়া যায়নি।</p>';
+      return;
+    }
+    matches.forEach(piece => {
+      const item = document.createElement('a');
+      item.href = `piece.html?id=${piece.id}`;
+      item.className = 'search-result-item';
+      item.textContent = piece.title;
+      resultsBox.appendChild(item);
+    });
+  });
 </script>
 
 </body>
