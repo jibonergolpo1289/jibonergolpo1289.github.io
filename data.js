@@ -11,7 +11,7 @@ const disclaimerData = {
 const CATEGORIES = [
   { slug: "romantic", name: "সৎ আম্মু" },
   { slug: "natok",    name: "ভাবী" },
-  { slug: "golpo",    name: "খালা" },
+  { slug: "golpo",    name: "খালা+কাকীমা" },
   { slug: "movie",    name: "পারিবারিক" },
   { slug: "family",    name: "অন্যান্য" }
 ];
