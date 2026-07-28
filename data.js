@@ -12,7 +12,8 @@ const CATEGORIES = [
   { slug: "romantic", name: "সৎ আম্মু" },
   { slug: "natok",    name: "ভাবী" },
   { slug: "golpo",    name: "খালা" },
-  { slug: "movie",    name: "পারিবারিক" }
+  { slug: "movie",    name: "পারিবারিক" },
+  { slug: "family",    name: "অন্যান্য" }
 ];
 
 // প্রতিটি লেখার জন্য একটি entry। নতুন লেখা যোগ করতে এই প্যাটার্ন কপি করুন
